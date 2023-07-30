@@ -17,7 +17,6 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 #home-container{
   height: 96dvh;
