@@ -12,11 +12,11 @@
 #home{
   height: 100dvh;
   background: url(Asset/landingbg.jpg);
+  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-repeat: no-repeat;
-  background-size: cover;
   background-attachment: fixed;
 }
 #home-container{
