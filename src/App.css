@@ -91,6 +91,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-background-attachment: fixed;
+  -moz-background-attachment: fixed;
+  -o-background-attachment: fixed;
 }
 
 .about-items{
