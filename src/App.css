@@ -67,7 +67,6 @@
   width: 15.625rem;;
   height: 15.625rem;
   border-radius: 50%;
-  box-shadow: 0px 0px 25px hsl(0, 0%, 13%);
   backdrop-filter: blur(6.25rem);
   object-fit:cover;
   object-position: 50% 0%;
@@ -112,7 +111,7 @@
 }
 .about-left{
   display: flex;
-  width: 90%;
+  width: 95%;
   max-width: 106.25rem;
   margin: 0 auto;
   margin-top: 2.5rem;
@@ -326,6 +325,7 @@ footer {
     border-radius: 10px;
     width: 18.75rem;
     height: auto;
+    box-shadow: 0px 0px 25px hsl(0, 0%, 13%);
   }
   .about-items{
     height: 100%;
