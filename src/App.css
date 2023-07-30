@@ -90,10 +90,6 @@
   -o-background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  -webkit-background-attachment: fixed;
-  -moz-background-attachment: fixed;
-  -o-background-attachment: fixed;
 }
 
 .about-items{
@@ -147,7 +143,6 @@
   -o-background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .skill-items{
@@ -195,7 +190,6 @@
   -o-background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
 }
 .porta-items{
   padding: 1.25rem;
@@ -259,7 +253,6 @@ footer {
   -o-background-size: cover;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   color: rgb(231, 226, 226);
   padding-top: 6.25rem;
