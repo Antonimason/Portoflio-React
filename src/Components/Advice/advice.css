@@ -1,0 +1,28 @@
+.success-container{
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(234, 232, 232);
+    background: rgb(40, 165, 40);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 40px;
+    border-radius: 10px;
+    transition: all 3s;
+    animation-name: o;
+    animation-duration: 3;
+    position: absolute;
+    top: 10em;
+    left: 0;
+    z-index: 99;
+}
+
+@keyframes goUp {
+    from{
+        top: 10rem;
+    }
+    to{
+        top: -10rem;
+    }
+}

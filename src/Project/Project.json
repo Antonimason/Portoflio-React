@@ -1,0 +1,13 @@
+{
+    "Project":{
+        "blog":{
+            "link":"https://viajerosporelmundo.netlify.app",
+            "github":"https://github.com/Antonimason/Blog-Viajeros",
+            "alt":"blog",
+            "picture":"blog",
+            "title":"languaje.source.Projects.blog.title",
+            "icons":"[css3,html5]",
+            "text":"languaje.source.Projects.blog.description"
+        }
+    }
+}

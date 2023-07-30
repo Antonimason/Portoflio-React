@@ -1,0 +1,79 @@
+.cardskill-container{
+    width: 70%;
+    height: 15rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    border: 2px solid;
+    border-color: #71bef2 #31acff #1172b2 #31acff;
+    backdrop-filter: blur(10px);
+    border-radius: 1.25rem;
+}
+
+.cardskill-logo{
+    width: 100%;
+    height: 3rem;
+    font-size: 2.1em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardskill-text{
+    width:100%;
+    height: 8rem;
+    text-align: center;
+}
+
+.cardskill-title{
+    display: block;
+    padding: 0 0 1rem 0;
+    font-size: 0.8rem;
+}
+.cardskill-paragraph{
+    font-size: 0.7em;
+    padding:0 1rem;
+}
+
+@media only screen and (min-width:512px) {
+    .cardskill-container{
+        width: 16rem;
+    }
+}
+@media only screen and (min-width: 794px){
+    
+    .cardskill-title{
+        font-size: 1.1em;
+    }
+    .cardskill-logo{
+        font-size: 3em;
+        height: 5rem;
+    }
+    .cardskill-paragraph{
+        font-size: 0.7em;
+    }
+}
+@media only screen and (min-width:1024px) {
+    .cardskill-container{
+        width: 17rem;
+        height: 22rem;
+    }
+    .cardskill-title{
+        font-size: 1.2em;
+    }
+
+    .cardskill-text{
+        height: 10rem;
+    }
+    .cardskill-logo{
+        height: 7rem;
+        font-size: 4em;
+    }
+    .cardskill-paragraph{
+        font-size: 0.8em;
+        padding: 0 2rem;
+        text-align: justify;
+    }
+}

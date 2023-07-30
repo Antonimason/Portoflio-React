@@ -1,0 +1,60 @@
+#survey-form{
+    width: 90%;
+    max-width:800px;
+    border-radius: 20px;
+    margin: 0 auto 2em auto;
+    padding: 2rem;
+    display:flex;
+    flex-direction: column;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.5);
+    position: relative;
+
+}
+#name::placeholder, #email::placeholder{
+    margin-left: 1rem,
+}
+#survey-form label{
+    font-size: 1.2em;
+    margin: 1rem 0.1rem 0.5rem;
+}
+
+#name, #email{
+    height: 2.3rem;
+}
+
+#message{
+    resize:none;
+    padding: 0.5rem;
+    height: 5rem;
+}
+.active{
+    padding: 0.5rem;
+    background-color: rgba(232, 232, 232,0.1);
+    color:white;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+.active:focus{
+    background-color: rgb(205, 205, 205);
+    color: black;
+}
+
+#button-send{
+  margin: 1rem auto;
+  border-radius: 20px; 
+  border:none;
+  padding: .75rem .9375rem;
+  cursor:pointer;
+  font-size: 0.93em;
+  color: white;
+  transition: all 1s;
+}
+
+
+.success-tag{
+    font-size: 0.93em;
+}

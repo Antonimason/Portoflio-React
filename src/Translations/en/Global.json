@@ -1,0 +1,112 @@
+{
+    "source": {
+        "Header": {
+            "home":"Home",
+            "about":"About",
+            "skill":"Skills",
+            "project":"Projects",
+            "contact":"Contact" 
+        },
+        "Home":{
+            "name":"Antonio Giambra",
+            "profile":"Front-End Developer",
+            "read-more":"Read more"
+        },
+        "About":{
+            "about":"About",
+            "resume":"Certificates",
+            "download":"Download CV",
+            "aboutMe":"About me",
+            "me": "My name is Antonio Giambra. I was born and raised in Caracas-Venezuela and currently reside in Dublín-Ireland. I'm very passionate about travelling and learning from different cultures around the world. I am a self-taught web developer and highly motivated for learning new technologies.",
+            "courses":{
+                "course1" : {
+                "title":"Web Development introduction HTML",
+                "description":"Google Academy",
+                "finished":"2022",
+                "link":"https://drive.google.com/file/d/1EAenGAyN_00RVoYoXkZ3XT3ePDRzvro7/view?usp=drive_link"
+            },
+            "course2":{
+                "title":"Web Development introduction CSS",
+                "description":"Google Academy",
+                "finished":"2022",
+                "link":"https://drive.google.com/file/d/1NWuhTXI0T2BRC1ML4FtWish6_iHEXC9w/view?usp=drive_link"
+            },
+            "course3":{
+                "title":"Front End Web Development Ultimate Guide",
+                "description":"Udemy",
+                "finished":"2023",
+                "link":"https://udemy-certificate.s3.amazonaws.com/pdf/UC-4ffc833e-0554-4ff5-848e-ba5298bdd4a2.pdf"
+            },
+            "course4":{
+                "title":"Responsive Web Design",
+                "description":"Free Code Camp",
+                "finished":"2023",
+                "link":"https://www.freecodecamp.org/certification/fccfb6a016f-b514-4d74-97e4-76d1dcda203d/responsive-web-design"
+            }}
+        },
+        "Skills":{
+            "skills":"My Skills",
+            "Sskills":"Soft Skills",
+            "learning":{
+                "title":"Self-Learning",
+                "description":"I am highly motivated to learn by myself, and I am willing to face new situations, take risks and experiment with creative ideas to find original solutions. "
+            },
+            "problem":{
+                "title":"Problem-Solving",
+                "description":"I deal positively with all problems. If the programme performs differently than expected, I can review the code to determine the source of the problem and find an effective solution."
+            },
+            "time":{
+                "title":"Time Management",
+                "description":"I set clear and realistic goals and then break them down into smaller tasks and set deadlines for each of them when carrying out a project, as well as establishing routines to optimise my productivity."
+            },
+            "accountability":{
+                "title":"Accountability",
+                "description":"I always own my mistakes and try to learn from them, take the opportunity to analyse what went wrong, and then use this data both to fix the problem and to avoid mistakes in the future."
+            },
+            "Hskills":"Hard Skills"
+        },
+        "Projects":{
+            "project":"These are some projects",
+            "small":"Show All",
+            "jquery":"JQuery",
+            "react":"React Js",
+            "blog":{
+                "title":"Blog",
+                "description":"A blog page made with HTML and CSS. Viajeros por el mundo a couple that likes the exciting experience of traveling around the world"
+            },
+            "calculator":{
+                "title":"Calculator",
+                "description":"Calculator made with HTML, CSS and Javascript to solve basic mathematical equations as addition, subtraction, multiplication and division."
+            },
+            "watch":{
+                "title":"Watch",
+                "description":"Clock, stopwatch and timer made with HTML, CSS, Javascript and the Date API . Useful to make the most of your time needs."
+            },
+            "wheater":{
+                "title":"Weather App",
+                "description":"Weather page where you can see the weather for many cities around the world. Made with HTML, CSS and JavaScript using also the Openweathermap API."
+            },
+            "todojs":{
+                "title":"To do List",
+                "description":"If you are one of those people who forgets everything, why not use a to do list?. Made with Bootstrap 5, Javascript and the Localstorage API."
+            },
+            "gallery":{
+                "title":"Gallery",
+                "description":"The following project is for all those people who find the world of anime fun. Here you have this image gallery made with Bootstrap 5 and JQuery."
+            },
+            "todoreact":{
+                "title":"To do List",
+                "description":"The project is based on a To-do-List where you can add your tasks that you want to do. I've used the LocalStorage API to store the tasks data."
+            }
+        },
+        "Footer":{
+            "together":"Let's work together...",
+            "text":"Follow my online fan page on Instagram and profiles on Linkedin and GitHub",
+            "mail":"Send a mail",
+            "name":"Name",
+            "email":"Email",
+            "message":"Message",
+            "send":"Send Email"
+        }
+    }
+}
