@@ -7,9 +7,9 @@ function Form (props){
 
   let languaje = props.languajeActive;
   const styles = {
-    result: "background: linear-gradient(90deg,#2ad39f,#0170f0);width: 100%;font-size: 1.2em;",
-    load : "width:20%; background-color: grey; font-size:1.2em",
-    checked : "width:20%; background-color: rgb(40, 165, 40);font-size:1.2em"
+    result: "background: linear-gradient(90deg,#2ad39f,#0170f0);width: 100%;font-size: 0.93em;",
+    load : "width:20%; background-color: grey; font-size:0.93em",
+    checked : "width:20%; background-color: rgb(40, 165, 40);font-size:0.93em"
   }
 
   const form = useRef();
