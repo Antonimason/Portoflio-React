@@ -42,6 +42,12 @@
                 "description":"Free Code Camp",
                 "finished":"2023",
                 "link":"https://www.freecodecamp.org/certification/fccfb6a016f-b514-4d74-97e4-76d1dcda203d/responsive-web-design"
+            },
+            "course5":{
+                "title":"JavaScript Algorithms and Data Structures",
+                "description":"Free Code Camp",
+                "finished":"2023",
+                "link":"https://www.freecodecamp.org/certification/fccfb6a016f-b514-4d74-97e4-76d1dcda203d/javascript-algorithms-and-data-structures"
             }}
         },
         "Skills":{
@@ -68,7 +74,7 @@
         "Projects":{
             "project":"Aquí podras ver algunos proyectos que he hecho",
             "small":"Pequeños Proyectos",
-            "jquery":"Poryectos en JQuery",
+            "jquery":"Proyectos en JQuery",
             "react":"Proyectos en React",
             "blog":{
                 "title":"Blog",
