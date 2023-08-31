@@ -5,9 +5,11 @@
   scroll-behavior: smooth;
 }
 html{
+  width:100%;
   font-size: 100%;
 }
 body {
+  width: 100%;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
