@@ -2,7 +2,8 @@
     color: white;
     position: relative;
     width: 100%;
-    max-width: 106.25rem;
+    max-width: 90rem;
+    margin:0 auto;
 }
 
 .header-logo{display:none;}
