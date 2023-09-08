@@ -147,7 +147,7 @@ function App() {
       todolistreact:{
         made:"react",
         key:7,
-        link:"https://antonimason.github.io/React-TodoList/",
+        link:"https://antonimason-todolist.netlify.app/",
         github:"https://github.com/Antonimason/React-TodoList",
         alt:"TodoList",
         image:Calendar,
