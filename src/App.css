@@ -25,7 +25,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 106.25rem;
+  max-width: 90rem;
   margin: 0 auto;
 }
 .home-text{
@@ -151,7 +151,7 @@
   flex-direction: column;
   padding: 1.25rem;
   width: 100%;
-  max-width:106.25rem;
+  max-width:90rem;
   margin:0 auto;
 }
 .together{
@@ -194,7 +194,7 @@
   padding: 1.25rem;
   margin: 0 auto;
   width: 100%;
-  max-width: 106.25rem;
+  max-width: 90rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;

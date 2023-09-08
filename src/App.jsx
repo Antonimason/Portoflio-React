@@ -255,7 +255,7 @@ function App() {
       <section id="home">
         <div id="home-container">
           <div className="home-container-img">
-            <img className="home-img" src={antoi} loading="lazy" alt="Antonio Giambra"/>
+            <img className="home-img" src={antoi} alt="Antonio Giambra"/>
           </div>
           <div className="home-text">
             <h1 className="home-title">{languaje.source.Home.name}</h1>
