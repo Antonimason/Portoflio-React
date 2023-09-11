@@ -100,6 +100,10 @@
                 "title":"Galería",
                 "description":"Este proyecto es para todas aquellas personas que encuentran divertido el mundo del Anime. Aquí tenéis esta galería hecha con Bootstrap 5 y JQuery."
             },
+            "portfolio":{
+                "title":"Portafolio",
+                "description":"Primer portafolio hecho con javascript, perfecto hablarte de mi y mostrar mis habilidades aprendidas y proyectos que he realizado."
+            },
             "todoreact":{
                 "title":"Lista de tareas",
                 "description":"Una lista de tareas 2.0 donde puedes añadir tus tareas diarias. Hecho con React y la API LocalStorage para almacenar los datos."

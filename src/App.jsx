@@ -22,6 +22,7 @@ import Galery from "./Asset/galeria.jpeg";
 import antonito from "./Asset/antonito.jpg";
 import Calendar from "./Asset/calendar.png";
 import antoi from "./Asset/foto-giambra-min.png";
+import portfolio from "./Asset/portfolio.png";
 
 //----------------IMPORT REACT ICONS-------------------
 import { ImLinkedin2 } from "react-icons/im";
@@ -144,9 +145,20 @@ function App() {
         title:languaje.source.Projects.gallery.title,
         text:languaje.source.Projects.gallery.description
       },
+      portfolio:{
+        made:"js",
+        key:7,
+        link:"https://antonimason.netlify.app/",
+        github:"https://github.com/Antonimason/Portfolio",
+        alt:"Portfolio 1.0",
+        image:portfolio,
+        title:languaje.source.Projects.portfolio.title,
+        icons:[css3,html5,js],
+        text:languaje.source.Projects.portfolio.description
+      },
       todolistreact:{
         made:"react",
-        key:7,
+        key:8,
         link:"https://antonimason.github.io/React-TodoList/",
         github:"https://github.com/Antonimason/React-TodoList",
         alt:"TodoList",

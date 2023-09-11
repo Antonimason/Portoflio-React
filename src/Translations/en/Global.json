@@ -100,6 +100,10 @@
                 "title":"Gallery",
                 "description":"The following project is for all those people who find the world of anime fun. Here you have this image gallery made with Bootstrap 5 and JQuery."
             },
+            "portfolio":{
+                "title":"Portfolio",
+                "description":"First portfolio made with javascript, perfect to tell you about myself and show my learned skills and projects I have done."
+            },
             "todoreact":{
                 "title":"To do List",
                 "description":"The project is based on a To-do-List where you can add your tasks that you want to do. I've used the LocalStorage API to store the tasks data."
