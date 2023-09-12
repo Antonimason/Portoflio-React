@@ -83,7 +83,7 @@
   margin: 0 0.43rem;
 }
 #about-container {
-  background-image: url(Asset/bg1.jpg);
+  background-image: url(Asset/bg1.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -136,7 +136,7 @@
 }
 #skill-container {
   width: 100%;
-  background-image: url(Asset/bg3.jpg);
+  background-image: url(Asset/bg3.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -183,7 +183,7 @@
   justify-content: center;
 }
 #porta-contenedor {
-  background-image: url(Asset/bg4.jpg);
+  background-image: url(Asset/bg4.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
