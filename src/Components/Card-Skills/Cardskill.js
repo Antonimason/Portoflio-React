@@ -5,8 +5,8 @@ function Cardskill(props){
         <div className="cardskill-container">
             <div className="cardskill-logo">{props.logo}</div>
             <div className="cardskill-text">
-                <h3 className="cardskill-title">{props.title}</h3>
-                <p className="cardskill-paragraph">{props.description}</p>
+                <h3 className="cardskill-title title">{props.title}</h3>
+                <p className="cardskill-paragraph text">{props.description}</p>
             </div>
         </div>
     )

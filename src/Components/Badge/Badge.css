@@ -30,7 +30,6 @@
   .text-box {
     width: calc(100% - 5.625rem);
     margin-left: 0.625rem;
-    color: white;
     font-family: 'Poppins' sans-serif;
   }
   

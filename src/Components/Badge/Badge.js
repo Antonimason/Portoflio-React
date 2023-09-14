@@ -6,9 +6,9 @@ function Badge(props) {
       <div className="badge-img-container"><img className="badge-img" src={props.img} alt={props.name} loading="lazy"/></div>
       <div className="text-box">
         <div className="text-content">
-          <p className="text-box-name">{props.name}</p>
+          <p className="text-box-name title">{props.name}</p>
         </div>
-        <p className="text-box-description">Started: {props.date}</p>
+        <p className="text-box-description text">Started: {props.date}</p>
         <div></div>
       </div>
     </div>

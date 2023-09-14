@@ -17,11 +17,11 @@ function Card(props) {
           </div>
           <div className="card-text">
             <div className="card-text-container">
-              <h3 className="card-title">{props.title}</h3>
+              <h3 className="card-title title">{props.title}</h3>
               <div className="card-icon">{iconBox}</div>
             </div>
             <div className="card-description-container">
-              <p className="card-description">{props.text}</p>
+              <p className="card-description text">{props.text}</p>
             </div>
           </div>
       </div>

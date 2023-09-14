@@ -292,8 +292,8 @@ function App() {
               <button ref={certificateButton} className="port-button" onClick={(e)=>{setPageActive("certificate")}}>{languaje.source.About.resume}</button>
             </div>
             <div className="about-text" style={pageActive==="about" ? {"display":"block"} : {"display": "none"}}>
-              <h2 id="about-me" className="together">{languaje.source.About.aboutMe}</h2>
-              <p id="my-resume">{languaje.source.About.me}</p>
+              <h2 id="about-me" className="together title">{languaje.source.About.aboutMe}</h2>
+              <p id="my-resume" className="text">{languaje.source.About.me}</p>
             </div>
             <div className="about-certificate" style={pageActive==="certificate" ? {"display":"flex"} : {"display": "none"}}>
               {searchCourse()}
