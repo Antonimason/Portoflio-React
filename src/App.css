@@ -256,11 +256,38 @@ footer {
   padding-top: 6.25rem;
   padding-bottom: 1.25rem;
 }
+.playlist{
+  width: 90%;
+  max-width: 80rem;
+  margin: 8rem auto 5rem auto;
+  display: flex;
+  place-items: center;
+  gap: 1.5rem;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  border: 1px solid;
+  border-color: #71bef2 #31acff #1172b2 #31acff;
+  border-radius: 20px;
+}
+
+.spotify-img{
+  width: 100%;
+  &&:hover{
+    opacity: 0.5;
+  }
+}
 .sociales {
   width: 100%;
   text-align: center;
   padding-bottom: 0.9375em;
 }
+.together-text{
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
 .together {
   display: block;
   text-align: center;
@@ -268,11 +295,9 @@ footer {
   font-weight: bold;
   margin-bottom: 0.625rem;
 }
-.together-text{
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 2rem;
+.together-left{
+  text-align: left;
+  width: 100%;
 }
 .sociales p {
   display: inline-block;
@@ -291,6 +316,14 @@ footer {
   color: violet;
 }
 @media only screen and (min-width: 768px) {
+  .playlist-box{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .playlist-text{
+    font-size: 1.2em;
+    padding: 1.2rem 0;
+  }
   .porta-items {
     flex-direction: row;
     flex-wrap:wrap;
@@ -349,6 +382,7 @@ footer {
   #about-me {
     margin-bottom: 2.1875rem;
   }
+  
   .sociales p {
     font-size: 0.9375em;
     font-weight: bold;
@@ -375,5 +409,16 @@ footer {
     padding: 0 0 0 0;
     margin: 0;
     align-self: stretch;
+  }
+}
+
+@media (width > 1440px) {
+  .playlist{
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .together-left{
+    text-align: left;
+    align-self: flex-start;
   }
 }

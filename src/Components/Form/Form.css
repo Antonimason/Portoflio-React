@@ -7,7 +7,8 @@
     display:flex;
     flex-direction: column;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid;
+    border-color: #71bef2 #31acff #1172b2 #31acff;
     position: relative;
 
 }

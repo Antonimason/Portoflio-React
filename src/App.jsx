@@ -23,11 +23,12 @@ import antonito from "./Asset/antonito.jpg";
 import Calendar from "./Asset/calendar.png";
 import antoi from "./Asset/foto-giambra-min.png";
 import portfolio from "./Asset/portfolio.png";
+import spotify from "./Asset/spotify.png"
 
 //----------------IMPORT REACT ICONS-------------------
 import { ImLinkedin2 } from "react-icons/im";
 import { RxInstagramLogo } from "react-icons/rx";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaSpotify } from "react-icons/fa";
 import { FcPuzzle, FcIdea, FcAlarmClock, FcApproval } from "react-icons/fc";
 import { BiLoaderCircle, BiCheck } from "react-icons/bi"
 
@@ -259,7 +260,7 @@ function App() {
         skill = {languaje.source.Header.skill}
         projects = {languaje.source.Header.project}
         contact = {languaje.source.Header.contact}
-        github={<FaGithub/>} linkedin={<ImLinkedin2/>} instagram={<RxInstagramLogo/>}/>
+        github={<FaGithub/>} linkedin={<ImLinkedin2/>} instagram={<RxInstagramLogo/>} spotify={<FaSpotify/>}/>
       </div>
 
       <Progress/>
@@ -348,38 +349,21 @@ function App() {
           <h3 className="together">{languaje.source.Footer.together}</h3>
 
           <Forma languajeActive={languaje} iconLoad ={<BiLoaderCircle/>} iconResult = {<BiCheck/>}/>
+
+          <div className="playlist">
+            <div className="playlist-box">
+              <h3 className="together together-left">{languaje.source.Footer.spotify}</h3>
+              <p className="playlist-text text">{languaje.source.Footer.spotifyText}</p>
+            </div>
+            <a href="https://open.spotify.com/playlist/4k7WkWOUjsTeU6EAc4JWjC" target="_blank" rel="noreferrer" className="spotify-icon" title="spotify-icon"><img src={spotify} alt="Mi Spotify List" className="spotify-img"/></a>
+          </div>
+
           <h4 className="together-text">{languaje.source.Footer.text}</h4>
           <div className="sociales">
-            <a
-              href="https://www.instagram.com/anto_code9/"
-              target="_blank"
-              rel="noreferrer"
-              id="instagram"
-              className="social-box"
-              title="Instagram"
-            >
-              <RxInstagramLogo />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/antonio-giambra-castellanos-293148233/"
-              target="_blank"
-              rel="noreferrer"
-              id="linkedin"
-              className="social-box"
-              title="Linkedin"
-            >
-              <ImLinkedin2 />
-            </a>
-            <a
-              href="https://github.com/Antonimason"
-              target="_blank"
-              rel="noreferrer"
-              id="github"
-              className="social-box"
-              title="Github"
-            >
-              <FaGithub />
-            </a>
+            <a href="https://www.instagram.com/anto_code9/" target="_blank"rel="noreferrer"id="instagram" className="social-box" title="Instagram"><RxInstagramLogo /></a>
+            <a href="https://www.linkedin.com/in/antonio-giambra-castellanos-293148233/"target="_blank"rel="noreferrer"id="linkedin"className="social-box"title="Linkedin"><ImLinkedin2 /></a>
+            <a href="https://github.com/Antonimason"target="_blank" rel="noreferrer" id="github" className="social-box" title="Github"><FaGithub /></a>
+            <a href="https://open.spotify.com/playlist/4k7WkWOUjsTeU6EAc4JWjC" target="_blank" rel="noreferrer" className="social-box" title="spotify-icon"><FaSpotify/></a>
           </div>
         </div>
       </footer>

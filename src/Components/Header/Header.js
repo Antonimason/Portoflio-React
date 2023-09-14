@@ -45,6 +45,7 @@ function Header(props){
               <a className='sociales-path' href="https://www.instagram.com/anto_code9/" target="_blank" rel="noreferrer" title="instagram">{props.instagram}</a>
               <a className='sociales-path' href="https://www.linkedin.com/in/antonio-giambra-castellanos-293148233/" target="_blank" rel="noreferrer" title="linkedin">{props.linkedin}</a>
               <a className='sociales-path' href="https://github.com/Antonimason" target="_blank" rel="noreferrer" title="github"> {props.github}</a>
+              <a className='sociales-path' href="https://open.spotify.com/playlist/4k7WkWOUjsTeU6EAc4JWjC" target="_blank" rel="noreferrer"  title="spotify-icon">{props.spotify}</a>
             </div>
 
         </div>

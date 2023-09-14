@@ -116,7 +116,9 @@
             "name":"Nombre",
             "email":"Correo Electrónico",
             "message":"Mensaje",
-            "send":"Enviar"
+            "send":"Enviar",
+            "spotify":"Mi Playlist en Spotify",
+            "spotifyText":"¿Te gusta escuchar música mientras codificas? Te invito a escuchar mi playlist de Música Electrónica para disfrutar y estar concentrado en tu código."
         }
     }
 }
