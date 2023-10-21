@@ -143,9 +143,8 @@
   max-width: 50rem;
   display: flex;
   place-items: center;
-  gap: 1.5rem;
   flex-direction: column;
-  padding: 2rem 3rem;
+  padding: 1rem 0;
 }
 .spotify-img{
   width: 100%;
@@ -223,7 +222,7 @@
   background-size: cover;
 }
 .porta-items{
-  padding: 0 1.25rem;
+  padding: 1.25rem;
   margin: 0 auto;
   width: 100%;
   max-width: 90rem;
@@ -243,14 +242,13 @@
   width: 100%;
   margin-top: 1.25rem;
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .port-button{
-  width: 9.37rem;
-  border:none;
+  width: 7.5rem;
   cursor: pointer;
-  margin: 0.625rem 0.625rem;
+  margin: 0.625rem;
   font-size: 0.87em;
   padding: 0.75rem 0.9375rem;
   background: transparent;
@@ -261,7 +259,7 @@
 }
 .port-button:hover{
   background: linear-gradient(45deg,#2ad39f,#b72ac2);
-  border: none;
+  border: 1px solid rgba(4, 0, 35, 0.1);
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
@@ -424,7 +422,7 @@ footer {
 @media (width > 1440px) {
   .playlist{
     flex-direction: row;
-    gap: 5rem;
+    gap: 2rem;
   }
   .together-left{
     text-align: left;

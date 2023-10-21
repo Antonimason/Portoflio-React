@@ -1,6 +1,6 @@
 .badge-container {
     width: 100%;
-    max-width: 8rem;
+    max-width: 4.5rem;
     height: 4.375rem;
     background: rgba(53, 53, 53, 0.2);
     border-radius: 1.25rem;
@@ -16,8 +16,8 @@
   }
   
   .badge-img-container {
-    width: 4.125rem;
-    height: 4.125rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 0.625rem;
   }
 
@@ -51,5 +51,10 @@
   @media only screen and (min-width:992px) {
     .badge-container {
         height: 8rem;
+        max-width: 8rem;
+    }
+    .badge-img-container {
+      width: 4.125rem;
+      height: 4.125rem;
     }
   }
