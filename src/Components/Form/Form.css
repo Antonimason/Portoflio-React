@@ -9,6 +9,7 @@
     backdrop-filter: blur(10px);
     border: 1px solid;
     border-color: #71bef2 #31acff #1172b2 #31acff;
+    box-shadow: rgba(92, 240, 248, 0.6) 0px 0px 12px 1.2px;
     position: relative;
 
 }
@@ -53,6 +54,7 @@
   font-size: 0.93em;
   color: white;
   transition: all 1s;
+  box-shadow: rgba(92, 240, 248, 0.6) 0px 0px 12px 1.2px;
 }
 
 

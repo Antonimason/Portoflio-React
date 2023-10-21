@@ -9,8 +9,8 @@ import Certificate from "./Components/Certificate-badge/Certificate";
 import Forma from "./Components/Form/Form";
 
 //-------------------LANGUAJES----------------------
-import global_es from "./Translations/es/Global.json"
-import global_en from "./Translations/en/Global.json"
+import global_es from "./Translations/es/Global.json";
+import global_en from "./Translations/en/Global.json";
 
 //----------------IMPORT IMAGES-----------------
 import Blog from "./Asset/blog.jpg";
@@ -23,24 +23,26 @@ import antonito from "./Asset/antonito.jpg";
 import Calendar from "./Asset/calendar.png";
 import antoi from "./Asset/foto-giambra-min.png";
 import portfolio from "./Asset/portfolio.png";
-import spotify from "./Asset/spotify.png"
+import spotify from "./Asset/spotify.png";
 
 //----------------IMPORT REACT ICONS-------------------
 import { ImLinkedin2 } from "react-icons/im";
 import { RxInstagramLogo } from "react-icons/rx";
 import { FaGithub, FaSpotify } from "react-icons/fa";
 import { FcPuzzle, FcIdea, FcAlarmClock, FcApproval } from "react-icons/fc";
-import { BiLoaderCircle, BiCheck } from "react-icons/bi"
+import { BiLoaderCircle, BiCheck } from "react-icons/bi";
 
-import html5 from "./Asset/1.png"
-import css3 from "./Asset/2.png"
-import js from "./Asset/3.ico"
-import bootstrap from "./Asset/4.png"
-import jquery from "./Asset/5.png"
-import reacty from "./Asset/6.ico"
-import python from "./Asset/7.ico"
-import sql from "./Asset/8.png"
-import node from "./Asset/9.png"
+import html5 from "./Asset/1.png";
+import css3 from "./Asset/2.png";
+import js from "./Asset/3.ico";
+import bootstrap from "./Asset/4.png";
+import jquery from "./Asset/5.png";
+import reacty from "./Asset/6.ico";
+import python from "./Asset/7.ico";
+import sql from "./Asset/8.png";
+import node from "./Asset/9.png";
+import java from "./Asset/14.png";
+import redux from "./Asset/15.png";
 
 function App() {
   //------------SELECTION LANGUAJES----------------------
@@ -70,12 +72,13 @@ function App() {
   //-----------SHOWING PROJECTS SELECTED-----------------
   const [showProject, setShowProject] = useState(" ");
 
-  //------------IT WAS CREATED FOR CONTROL DOM IN BUTTONS OF THE PORTFOLIO PAGE---------------
+  //------------THEY HAVE BEEN CREATED FOR DOM CONTROL IN ALL BUTTONS OF THE PORTFOLIO PAGE---------------
   const projectButton1 = useRef();
   const projectButton2 = useRef();
   const projectButton3 = useRef();
   const aboutButton = useRef();
   const certificateButton = useRef();
+  const spotifyButton = useRef();
 
   useEffect(() => {
 
@@ -171,23 +174,32 @@ function App() {
     }
     const styles = {
       transparent : "background-color: transparent; border:1px solid #71bef2 #31acff #1172b2 #31acff; padding: 12px 15px",
-      color: "background: linear-gradient(45deg,#2ad39f,#b72ac2); border: none; border-radius: 20px; padding: 12px 15px"
+      color: "background: linear-gradient(45deg,#2ad39f,#b72ac2); border: none; border-radius: 20px; padding: 12px 15px",
+      shadow: "box-shadow: rgba(92, 240, 248, 0.6) 0px 0px 12px 1.2px;",
+      noShadow: "box-shadow:none;"
     }
 
     
     if(pageActive === "about") {
-      aboutButton.current.style = styles.color;
-      certificateButton.current.style = styles.transparent;
+      aboutButton.current.style = `${styles.color};${styles.noShadow};`;
+      certificateButton.current.style = `${styles.transparent};${styles.shadow};`;
+      spotifyButton.current.style = `${styles.transparent};${styles.shadow};`;
     } else if (pageActive === "certificate") {
-      aboutButton.current.style = styles.transparent;
-      certificateButton.current.style = styles.color;
-    }else {return};
+      aboutButton.current.style = `${styles.transparent};${styles.shadow};`;
+      certificateButton.current.style = `${styles.color};${styles.noShadow};`;
+      spotifyButton.current.style = `${styles.transparent};${styles.shadow};`;
+    } else if (pageActive === "spotify"){
+      aboutButton.current.style = `${styles.transparent};${styles.shadow};`;
+      certificateButton.current.style = `${styles.transparent};${styles.shadow};`;
+      spotifyButton.current.style = `${styles.color};${styles.noShadow};`;
+    }
+    else {return};
 
     if (projectActive === "all") {
       //--------------CONTROL BORDER OF BUTTON 1 ---------------------------------
-      projectButton1.current.style = styles.color
-      projectButton2.current.style = styles.transparent
-      projectButton3.current.style = styles.transparent
+      projectButton1.current.style = `${styles.color};${styles.noShadow};`
+      projectButton2.current.style = `${styles.transparent};${styles.shadow};`
+      projectButton3.current.style = `${styles.transparent};${styles.shadow};`
       let projectstorage = [];
       for (const project in Projects){
         projectstorage.push(<Card
@@ -205,9 +217,9 @@ function App() {
 
       
     }else if (projectActive === "jquery"){
-      projectButton2.current.style = styles.color;
-      projectButton1.current.style= styles.transparent;
-      projectButton3.current.style = styles.transparent;
+      projectButton2.current.style = `${styles.color};${styles.noShadow};`
+      projectButton1.current.style= `${styles.transparent};${styles.shadow};`
+      projectButton3.current.style = `${styles.transparent};${styles.shadow};`
       let projectstorage = [];
       for (const project in Projects){
         if(Projects[project].made === "jquery") {
@@ -226,9 +238,9 @@ function App() {
 
     } else if(projectActive === "react"){
       //---------------------CONTROL OF BUTTON 2----------------------------------
-      projectButton3.current.style = styles.color;
-      projectButton1.current.style= styles.transparent;
-      projectButton2.current.style = styles.transparent;
+      projectButton3.current.style = `${styles.color};${styles.noShadow};`
+      projectButton1.current.style= `${styles.transparent};${styles.shadow};`
+      projectButton2.current.style = `${styles.transparent};${styles.shadow};`
       let projectstorage = [];
       for (const project in Projects){
         if(Projects[project].made === "react") {
@@ -291,6 +303,7 @@ function App() {
             <div className="button-about">
               <button ref={aboutButton} className="port-button" onClick={(e)=>{setPageActive("about")}}>{languaje.source.About.about}</button>
               <button ref={certificateButton} className="port-button" onClick={(e)=>{setPageActive("certificate")}}>{languaje.source.About.resume}</button>
+              <button ref={spotifyButton} className="port-button" onClick={(e)=>{setPageActive("spotify")}}>Spotify</button>
             </div>
             <div className="about-text" style={pageActive==="about" ? {"display":"block"} : {"display": "none"}}>
               <h2 id="about-me" className="together title">{languaje.source.About.aboutMe}</h2>
@@ -298,6 +311,15 @@ function App() {
             </div>
             <div className="about-certificate" style={pageActive==="certificate" ? {"display":"flex"} : {"display": "none"}}>
               {searchCourse()}
+            </div>
+            <div className="about-spotify" style={pageActive==="spotify" ? {"display":"flex"} : {"display": "none"}}>
+              <div className="playlist">
+                <div className="playlist-box">
+                  <h3 className="together">{languaje.source.Footer.spotify}</h3>
+                  <p className="playlist-text text">{languaje.source.Footer.spotifyText}</p>
+                </div>
+                <a href="https://open.spotify.com/playlist/4k7WkWOUjsTeU6EAc4JWjC" target="_blank" rel="noreferrer" className="spotify-icon" title="spotify-icon"><img src={spotify} alt="Mi Spotify List" className="spotify-img"/></a>
+              </div>
             </div>
             <a href="https://www.canva.com/design/DAFoth8aIKo/bNzwm6oAoVnQGqEgqqqw1w/view?utm_content=DAFoth8aIKo&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank" rel="noreferrer" title="Curriculum vitae" className="cv">{languaje.source.About.download}</a>
           </div>
@@ -328,6 +350,8 @@ function App() {
             <Badge img={python} name="Python" date="March 2023" />
             <Badge img={sql} name="SQL" />
             <Badge img={node} name="Node.js" />
+            <Badge img={java} name="Java" />
+            <Badge img={redux} name="Redux" />
           </div>
         </div>
       </section>
@@ -349,14 +373,6 @@ function App() {
           <h3 className="together">{languaje.source.Footer.together}</h3>
 
           <Forma languajeActive={languaje} iconLoad ={<BiLoaderCircle/>} iconResult = {<BiCheck/>}/>
-
-          <div className="playlist">
-            <div className="playlist-box">
-              <h3 className="together together-left">{languaje.source.Footer.spotify}</h3>
-              <p className="playlist-text text">{languaje.source.Footer.spotifyText}</p>
-            </div>
-            <a href="https://open.spotify.com/playlist/4k7WkWOUjsTeU6EAc4JWjC" target="_blank" rel="noreferrer" className="spotify-icon" title="spotify-icon"><img src={spotify} alt="Mi Spotify List" className="spotify-img"/></a>
-          </div>
 
           <h4 className="together-text">{languaje.source.Footer.text}</h4>
           <div className="sociales">

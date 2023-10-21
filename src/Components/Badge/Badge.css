@@ -1,6 +1,6 @@
 .badge-container {
     width: 100%;
-    max-width: 12.5rem;
+    max-width: 8rem;
     height: 4.375rem;
     background: rgba(53, 53, 53, 0.2);
     border-radius: 1.25rem;
@@ -9,16 +9,15 @@
     justify-content: center;
     backdrop-filter: blur(10px);
     transition: 0.5s ease-in-out;
-    box-shadow: rgba(255, 255, 255, 0.1) 0px 4px 12px;
+    box-shadow: rgba(92, 240, 248, 0.6) 0px 0px 12px 1.2px;
     margin: 0.625rem;
     border: 2px solid;
     border-color: #71bef2 #31acff #1172b2 #31acff;
   }
   
   .badge-img-container {
-    width: 3.125rem;
-    height: 3.125rem;
-    margin-left: 0.625rem;
+    width: 4.125rem;
+    height: 4.125rem;
     border-radius: 0.625rem;
   }
 
@@ -51,7 +50,6 @@
   
   @media only screen and (min-width:992px) {
     .badge-container {
-        max-width: 13.5rem;
-        height: 5rem;
+        height: 8rem;
     }
   }

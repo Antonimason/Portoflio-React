@@ -54,6 +54,7 @@
   width: 9.37rem;
   text-decoration: none;
   background: linear-gradient(90deg,#2ad39f,#0170f0);
+  box-shadow: rgba(92, 240, 248, 0.6) 0px 0px 12px 1.2px;
   padding: 0.75rem 0.93rem;
   border-radius: 1.25rem;
   transition: all 0.8s;
@@ -111,7 +112,7 @@
 .about-left{
   display: flex;
   width: 95%;
-  max-width: 106.25rem;
+  max-width: 50rem;
   margin: 0 auto;
   margin-top: 2.5rem;
   margin: 0 auto;
@@ -120,9 +121,7 @@
   flex-direction: column;
   text-align: center;
 }
-.cv{
-  font-size: 0.93em;
-}
+
 .about-text {
   margin-top: 2.5rem;
 }
@@ -133,6 +132,39 @@
   align-items: center;
   justify-content: center;
 }
+.about-spotify{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.playlist{
+  width: 100%;
+  max-width: 50rem;
+  display: flex;
+  place-items: center;
+  gap: 1.5rem;
+  flex-direction: column;
+  padding: 2rem 3rem;
+}
+.spotify-img{
+  width: 100%;
+  max-width: 30rem;
+  &&:hover{
+    opacity: 0.5;
+  }
+}
+.cv {
+  width: 70%;
+  margin: 1em auto 0 auto;
+  background-image: linear-gradient(90deg,#2ad39f,#0170f0);
+  box-shadow: rgba(92, 240, 248, 0.6) 0px 0px 12px 1.2px;
+  border-radius: 20px; 
+  padding: .75rem 0;
+  text-decoration: none;
+  font-size: 1em;
+}
+
 #skill-container {
   width: 100%;
   background-image: url(Asset/bg3.png);
@@ -170,12 +202,13 @@
 }
 .skill-section{
   width: 100%;
-  margin: 0.625rem 0;
+  margin: 0.825rem 0;
   font-size: 1.5em;
   text-align: center;
 }
 .skills-badges{
   width: 100%;
+  max-width: 45rem;
   margin: 5rem auto 0 auto;
   display:flex;
   flex-wrap: wrap;
@@ -190,7 +223,7 @@
   background-size: cover;
 }
 .porta-items{
-  padding: 1.25rem;
+  padding: 0 1.25rem;
   margin: 0 auto;
   width: 100%;
   max-width: 90rem;
@@ -231,15 +264,7 @@
   border: none;
   box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
-.cv {
-  width: 80%;
-  margin: 2em auto 0 auto;
-  background-image: linear-gradient(90deg,#2ad39f,#0170f0);
-  border-radius: 20px; 
-  padding: .75rem .9375rem;
-  text-decoration: none;
-  font-size: 0.875em;
-}
+
 .noproject {
   color: white;
 }
@@ -255,26 +280,6 @@ footer {
   color: rgb(231, 226, 226);
   padding-top: 6.25rem;
   padding-bottom: 1.25rem;
-}
-.playlist{
-  width: 90%;
-  max-width: 80rem;
-  margin: 8rem auto 5rem auto;
-  display: flex;
-  place-items: center;
-  gap: 1.5rem;
-  flex-direction: column;
-  padding: 2rem 3rem;
-  border: 1px solid;
-  border-color: #71bef2 #31acff #1172b2 #31acff;
-  border-radius: 20px;
-}
-
-.spotify-img{
-  width: 100%;
-  &&:hover{
-    opacity: 0.5;
-  }
 }
 .sociales {
   width: 100%;
@@ -410,12 +415,16 @@ footer {
     margin: 0;
     align-self: stretch;
   }
+  .about-left{
+    height: 80dvh;
+    max-height: 50rem;
+  }
 }
 
 @media (width > 1440px) {
   .playlist{
     flex-direction: row;
-    gap: 2rem;
+    gap: 5rem;
   }
   .together-left{
     text-align: left;

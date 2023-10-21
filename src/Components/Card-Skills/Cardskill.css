@@ -8,8 +8,10 @@
     gap: 0;
     border: 2px solid;
     border-color: #71bef2 #31acff #1172b2 #31acff;
+    box-shadow: rgba(92, 240, 248, 0.6) 0px 0px 12px 1.2px;
     backdrop-filter: blur(10px);
     border-radius: 1.25rem;
+    margin: 0 7px;
 }
 
 .cardskill-logo{
