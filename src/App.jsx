@@ -315,7 +315,7 @@ function App() {
             <div className="about-spotify" style={pageActive==="spotify" ? {"display":"flex"} : {"display": "none"}}>
               <div className="playlist">
                 <div className="playlist-box">
-                  <h3 className="together">{languaje.source.Footer.spotify}</h3>
+                  <h3 className="together title">{languaje.source.Footer.spotify}</h3>
                   <p className="playlist-text text">{languaje.source.Footer.spotifyText}</p>
                 </div>
                 <a href="https://open.spotify.com/playlist/4k7WkWOUjsTeU6EAc4JWjC" target="_blank" rel="noreferrer" className="spotify-icon" title="spotify-icon"><img src={spotify} alt="Mi Spotify List" className="spotify-img"/></a>
