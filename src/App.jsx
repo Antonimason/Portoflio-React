@@ -40,9 +40,9 @@ import jquery from "./Asset/5.png";
 import reacty from "./Asset/6.ico";
 import python from "./Asset/7.ico";
 import sql from "./Asset/8.png";
-import node from "./Asset/9.png";
 import java from "./Asset/14.png";
 import redux from "./Asset/15.png";
+import php from "./Asset/12.png";
 
 function App() {
   //------------SELECTION LANGUAJES----------------------
@@ -349,7 +349,7 @@ function App() {
             <Badge img={reacty} name="React" date="February 2023" />
             <Badge img={python} name="Python" date="March 2023" />
             <Badge img={sql} name="SQL" />
-            <Badge img={node} name="Node.js" />
+            <Badge img={php} name="PHP" />
             <Badge img={java} name="Java" />
             <Badge img={redux} name="Redux" />
           </div>
