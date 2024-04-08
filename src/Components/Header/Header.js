@@ -23,7 +23,7 @@ function Header(props){
         let hola = parseInt(((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100))
         if (hola === 0) {
             setBg("background: transparent")
-        }else { setBg("background: white; margin-bottom: 5px;")}
+        }else { setBg("background: white, margin-bottom: 5px,")}
         
     }
     window.addEventListener('change',changeBg)

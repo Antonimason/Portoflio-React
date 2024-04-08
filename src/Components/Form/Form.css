@@ -41,7 +41,7 @@
 }
 
 .active:focus{
-    background-color: rgb(205, 205, 205);
+    background-color: rgb(255, 250, 250);
     color: black;
 }
 
