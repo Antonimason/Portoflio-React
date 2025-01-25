@@ -17,6 +17,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 100%;
+  overflow: auto; /* Permite desplazamiento */
+    scrollbar-width: none; /* Oculta el scroll en Firefox */
+    -ms-overflow-style: none; /* Oculta el scroll en navegadores antiguos de Microsoft */
+}
+
+/* Ocultar scroll en navegadores basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    display: none;
 }
 .title{
   color: white;

@@ -1,13 +1,79 @@
 {
-    "Project":{
-        "blog":{
-            "link":"https://viajerosporelmundo.netlify.app",
-            "github":"https://github.com/Antonimason/Blog-Viajeros",
-            "alt":"blog",
-            "picture":"blog",
-            "title":"languaje.source.Projects.blog.title",
-            "icons":"[css3,html5]",
-            "text":"languaje.source.Projects.blog.description"
-        }
+    "todolistreact": {
+        "made": "react",
+        "key": 7,
+        "link": "https://antonimason.github.io/React-TodoList/",
+        "github": "https://github.com/Antonimason/React-TodoList",
+        "alt": "TodoList",
+        "image": "path/to/todolistreact-image.jpg",
+        "title": "TodoList Title",
+        "icons": ["react"],
+        "text": "Description of the React to-do list project."
+    },
+    "gallery": {
+        "made": "jquery",
+        "key": 6,
+        "link": "https://fananime-gallery.netlify.app/",
+        "github": "https://github.com/Antonimason/Gallery",
+        "alt": "Gallery",
+        "image": "path/to/gallery-image.jpg",
+        "title": "Gallery Title",
+        "icons": ["bootstrap", "jquery"],
+        "text": "Description of the gallery project."
+    },
+    "todolist": {
+        "made": "js",
+        "key": 5,
+        "link": "https://todolis-antog9.netlify.app/",
+        "github": "https://github.com/Antonimason/To-do-List",
+        "alt": "To do list",
+        "image": "path/to/todolist-image.jpg",
+        "title": "To Do List Title",
+        "icons": ["bootstrap", "js"],
+        "text": "Description of the to-do list project."
+    },
+    "weather": {
+        "made": "js",
+        "key": 4,
+        "link": "https://weatherantocode9.netlify.app",
+        "github": "https://github.com/Antonimason/Weather",
+        "alt": "Weather",
+        "image": "path/to/weather-image.jpg",
+        "title": "Weather Title",
+        "icons": ["css3", "html5", "js"],
+        "text": "Description of the weather project."
+    },
+    "watch": {
+        "made": "js",
+        "key": 3,
+        "link": "https://watchantocode9.netlify.app",
+        "github": "https://github.com/Antonimason/Clock-Timer-and-Stopwatch",
+        "alt": "Watch",
+        "image": "path/to/watch-image.jpg",
+        "title": "Watch Title",
+        "icons": ["css3", "html5", "js"],
+        "text": "Description of the watch project."
+    },
+    "calculator": {
+        "made": "js",
+        "key": 2,
+        "link": "https://calculatorantocode9.netlify.app",
+        "github": "https://github.com/Antonimason/Calculadora-JS",
+        "alt": "Calculator",
+        "image": "path/to/calculator-image.jpg",
+        "title": "Calculator Title",
+        "icons": ["css3", "html5", "js"],
+        "text": "Description of the calculator project."
+    },
+    "blog": {
+        "made": "html",
+        "key": 1,
+        "link": "https://viajerosporelmundo.netlify.app",
+        "github": "https://github.com/Antonimason/Blog-Viajeros",
+        "alt": "blog",
+        "image": "path/to/blog-image.jpg",
+        "title": "Blog Title",
+        "icons": ["css3", "html5"],
+        "text": "Description of the blog project."
     }
 }

@@ -1,44 +1,60 @@
-import React, { useState } from 'react'
-import './Header.css'
-import Hamburger from 'hamburger-react'
+import React, { useState, useEffect, useMemo } from 'react';
+import './Header.css';
+import Hamburger from 'hamburger-react';
 
 function Header(props){
 
     const [isOpen, setOpen] = useState(false);
 
-    //------------CONTROL DE QUERIES PARA LA HAMBURGUER EN RESPONSIVE----------------
-    const hamburguer = <Hamburger className="hamburguer" label="Show menu" name="menu" onToggle={toggled => { toggled ? setOpen(0) : setOpen(-500) }}/>
+    //------------CONTROL DE QUERIES PARA LA HAMBURGER EN RESPONSIVE----------------
+    const hamburguer = useMemo(() => (
+        <Hamburger 
+            className="hamburguer" 
+            toggled={isOpen} 
+            toggle={setOpen} 
+        />
+    ), [isOpen]);
 
-    const [ showHam, setShowHam ] = useState(window.innerWidth < 1024 ? hamburguer : false)
+    const [showHam, setShowHam] = useState(window.innerWidth < 1024 ? hamburguer : false);
     
-    let mediaX = window.matchMedia('(max-width:1023px)')
-    mediaX.addEventListener('change', showIcon)
-    function showIcon (){
-        mediaX.matches === true ? setShowHam(hamburguer) : setShowHam(false)
-    }
+    useEffect(() => {
+        const showIcon = () => {
+            setShowHam(window.innerWidth < 1024 ? hamburguer : false);
+        };
+
+        window.addEventListener('resize', showIcon);
+        return () => window.removeEventListener('resize', showIcon);
+    }, [hamburguer]);
 
     //-------CONTROL DE BG DEL HEADER CUANDO HAGA SCROLL LA PAGINA---------------------
     const [bg, setBg] = useState(" ");
-    const changeBg = () =>{
-        let hola = parseInt(((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100))
-        if (hola === 0) {
-            setBg("background: transparent")
-        }else { setBg("background: white, margin-bottom: 5px,")}
-        
-    }
-    window.addEventListener('change',changeBg)
-    window.onload = showIcon
+
+    const changeBg = () => {
+        let scrollPosition = parseInt(((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100));
+        setBg(scrollPosition === 0 ? "background: transparent" : "background: white; margin-bottom: 5px");
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', changeBg);
+        return () => window.removeEventListener('scroll', changeBg);
+    }, []);
+
+    //-------CERRAR EL NAVBAR AL HACER CLIC EN UNA OPCIÓN---------------------
+    const handleMenuClick = () => {
+        setOpen(false);
+    };
+
     return (
-        <div className='header-container' style={{bg}}>
+        <div className='header-container' style={{ bg }}>
             {showHam}
             <div className='header-logo'>Antonimason</div>
 
-            <ul className='nav-container' style={{left: isOpen +'px'}}>
-                <li className='nav-list'><a className='nav-path' href='#home' rel="noopener noreferrer" onClick={(e)=>{console.log(hamburguer.isFalse)}} title="home">{props.home}</a></li>
-                <li className='nav-list'><a className='nav-path' href='#about-container' rel="noopener noreferrer" title="about">{props.about}</a></li>
-                <li className='nav-list'><a className='nav-path' href='#skill-container' rel="noopener noreferrer" title="skills">{props.skill}</a></li>
-                <li className='nav-list'><a className='nav-path' href='#porta-contenedor' rel="noopener noreferrer" title="projects">{props.projects}</a></li>
-                <li className='nav-list'><a className='nav-path' href='#footer' rel="noopener noreferrer" title="contact">{props.contact}</a></li>
+            <ul className='nav-container' style={{ left: isOpen ? '0' : '-500px' }}>
+                <li className='nav-list'><a className='nav-path' href='#home' onClick={handleMenuClick} title="home">{props.home}</a></li>
+                <li className='nav-list'><a className='nav-path' href='#about-container' onClick={handleMenuClick} title="about">{props.about}</a></li>
+                <li className='nav-list'><a className='nav-path' href='#skill-container' onClick={handleMenuClick} title="skills">{props.skill}</a></li>
+                <li className='nav-list'><a className='nav-path' href='#porta-contenedor' onClick={handleMenuClick} title="projects">{props.projects}</a></li>
+                <li className='nav-list'><a className='nav-path' href='#footer' onClick={handleMenuClick} title="contact">{props.contact}</a></li>
             </ul>
 
             <div className="sociales-header">
@@ -47,9 +63,8 @@ function Header(props){
               <a className='sociales-path' href="https://github.com/Antonimason" target="_blank" rel="noreferrer" title="github"> {props.github}</a>
               <a className='sociales-path' href="https://open.spotify.com/playlist/4k7WkWOUjsTeU6EAc4JWjC" target="_blank" rel="noreferrer"  title="spotify-icon">{props.spotify}</a>
             </div>
-
         </div>
-    )
+    );
 }
 
 export default Header;

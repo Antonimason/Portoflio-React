@@ -71,7 +71,6 @@
   object-fit:cover;
   object-position: 50% 0%;
   background: transparent;
-  backdrop-filter: blur(10px);
 }
 .home-languaje{
   height: 4dvh;

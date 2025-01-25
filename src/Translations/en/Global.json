@@ -14,6 +14,7 @@
         },
         "About":{
             "about":"About",
+            "career":"Career",
             "resume":"Certificates",
             "download":"Download CV",
             "aboutMe":"About me",
@@ -72,10 +73,11 @@
             "Hskills":"Hard Skills"
         },
         "Projects":{
-            "project":"These are mine projects",
+            "project":"Projects",
             "small":"Show All",
             "jquery":"JQuery",
-            "react":"React Js",
+            "react":"React",
+            "python":"Python",
             "blog":{
                 "title":"Blog",
                 "description":"A blog page made with HTML and CSS. Viajeros por el mundo a couple that likes the exciting experience of traveling around the world"

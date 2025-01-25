@@ -8,11 +8,11 @@ import Cardskill from "./Components/Card-Skills/Cardskill";
 import Certificate from "./Components/Certificate-badge/Certificate";
 import Forma from "./Components/Form/Form";
 
-//-------------------LANGUAJES----------------------
+//------------------- IMPORTING LANGUAJES----------------------
 import global_es from "./Translations/es/Global.json";
 import global_en from "./Translations/en/Global.json";
 
-//----------------IMPORT IMAGES-----------------
+//----------------IMPORTING IMAGES-----------------
 import Blog from "./Asset/blog.jpg";
 import Watch from "./Asset/watch.jpg";
 import Calc from "./Asset/calcuadora.jpeg";
@@ -22,16 +22,16 @@ import Galery from "./Asset/galeria.jpeg";
 import antonito from "./Asset/antonito.jpg";
 import Calendar from "./Asset/calendar.png";
 import antoi from "./Asset/foto-giambra-min.png";
-import portfolio from "./Asset/portfolio.png";
 import spotify from "./Asset/spotify.png";
 
-//----------------IMPORT REACT ICONS-------------------
+//----------------IMPORTING REACT ICONS-----------------------/
 import { ImLinkedin2 } from "react-icons/im";
 import { RxInstagramLogo } from "react-icons/rx";
 import { FaGithub, FaSpotify } from "react-icons/fa";
 import { FcPuzzle, FcIdea, FcAlarmClock, FcApproval } from "react-icons/fc";
 import { BiLoaderCircle, BiCheck } from "react-icons/bi";
 
+//-----------------IMPORTING LANGUAJE ICONS----------------//
 import html5 from "./Asset/1.png";
 import css3 from "./Asset/2.png";
 import js from "./Asset/3.ico";
@@ -48,25 +48,28 @@ function App() {
   //------------SELECTION LANGUAJES----------------------
   const [selectionlanguaje, setSelectionlanguaje] = useState("")
   const [languaje, setLanguaje] = useState(global_en)
-  useEffect(()=>{selectionlanguaje==="ES" ? setLanguaje(global_es) : setLanguaje(global_en)}, [languaje, selectionlanguaje])
-
+  useEffect(()=> {
+    selectionlanguaje === "ES" ? setLanguaje(global_es) : setLanguaje(global_en)
+  }, [languaje, selectionlanguaje])
 
   //------------SELECTION BUTTON ABOUT PAGE ---------------------
   const [pageActive, setPageActive] = useState("about");
   
   const searchCourse = ()=>{
     let courses = languaje.source.About.courses
-    let element = [];
-    for(let course in courses){
-      element.push(<Certificate key={courses[course].title}
-      link={courses[course].link} 
-      title={courses[course].title} 
-      description={courses[course].description} 
-      finished={courses[course].finished}/>)
-    }
-    return element
-  }
+    //Converting the object into a value array
+    const courseArray = Object.values(courses);
 
+    return courseArray.map(course => (
+      <Certificate 
+        key={course.title} 
+        link={course.link} 
+        title={course.title} 
+        description={course.description} 
+        finished={course.finished} 
+      />
+    ));
+  }
   //---------SELECTION OF PROJECTS------------------------
   const [projectActive, setProjectActive] = useState("all");
   //-----------SHOWING PROJECTS SELECTED-----------------
@@ -76,102 +79,134 @@ function App() {
   const projectButton1 = useRef();
   const projectButton2 = useRef();
   const projectButton3 = useRef();
+  const projectButton4 = useRef();
   const aboutButton = useRef();
+  const careerButton = useRef();
   const certificateButton = useRef();
   const spotifyButton = useRef();
+
+  function filterProjectsByLanguaje(languaje, Projects){
+    let projectstorage = [];
+
+    if (languaje === "all") {
+        for (const project in Projects) {
+            projectstorage.push(
+                <Card
+                    key={Projects[project].key}
+                    link={Projects[project].link}
+                    github={Projects[project].github}
+                    alt={Projects[project].alt}
+                    image={Projects[project].image}
+                    title={Projects[project].title}
+                    icons={Projects[project].icons}
+                    text={Projects[project].text}
+                />
+            );
+        }
+    } else {
+        //If languaje is not "all", we filter by specified languaje
+        for (const project in Projects) {
+            if (Projects[project].made === languaje) {
+                projectstorage.push(
+                    <Card
+                        key={Projects[project].key}
+                        link={Projects[project].link}
+                        github={Projects[project].github}
+                        alt={Projects[project].alt}
+                        image={Projects[project].image}
+                        title={Projects[project].title}
+                        icons={Projects[project].icons}
+                        text={Projects[project].text}
+                    />
+                );
+            }
+        }
+    }
+      setShowProject(projectstorage)
+  }
 
   useEffect(() => {
 
     const Projects = {
-      blog:{
-          made:"html",
-          key:1,
-          link:"https://viajerosporelmundo.netlify.app",
-          github:"https://github.com/Antonimason/Blog-Viajeros",
-          alt:"blog",
-          image:Blog,
-          title:languaje.source.Projects.blog.title,
-          icons:[css3,html5],
-          text:languaje.source.Projects.blog.description
+      todolistreact: {
+          made: "react",
+          key: 7,
+          link: "https://antonimason.github.io/React-TodoList/",
+          github: "https://github.com/Antonimason/React-TodoList",
+          alt: "TodoList",
+          image: Calendar,
+          title: languaje.source.Projects.todoreact.title,
+          icons: [reacty],
+          text: languaje.source.Projects.todoreact.description
       },
-      calculator:{
-          made:"js",
-          key:2,
-          link:"https://calculatorantocode9.netlify.app",
-          github:"https://github.com/Antonimason/Calculadora-JS",
-          alt:"Calculator",
-          image:Calc,
-          title:languaje.source.Projects.calculator.title,
-          icons:[css3,html5,js],
-          text:languaje.source.Projects.calculator.description
+      gallery: {
+          made: "jquery",
+          key: 6,
+          link: "https://fananime-gallery.netlify.app/",
+          github: "https://github.com/Antonimason/Gallery",
+          alt: "Gallery",
+          image: Galery,
+          icons: [bootstrap, jquery],
+          title: languaje.source.Projects.gallery.title,
+          text: languaje.source.Projects.gallery.description
       },
-      watch:{
-        made:"js",
-        key:3,
-        link:"https://watchantocode9.netlify.app",
-        github:"https://github.com/Antonimason/Clock-Timer-and-Stopwatch",
-        alt:"Watch",
-        image:Watch,
-        title:languaje.source.Projects.watch.title,
-        icons:[css3,html5,js],
-        text:languaje.source.Projects.watch.description,
+      todolist: {
+          made: "js",
+          key: 5,
+          link: "https://todolis-antog9.netlify.app/",
+          github: "https://github.com/Antonimason/To-do-List",
+          alt: "To do list",
+          image: Todo,
+          title: languaje.source.Projects.todojs.title,
+          icons: [bootstrap, js],
+          text: languaje.source.Projects.todojs.description
       },
-      weather:{
-        made:"js",
-        key:4,
-        link:"https://weatherantocode9.netlify.app",
-        github:"https://github.com/Antonimason/Weather",
-        alt:"Weather",
-        image:Weather,
-        title:languaje.source.Projects.wheater.title,
-        icons:[css3,html5,js],
-        text:languaje.source.Projects.wheater.description
+      weather: {
+          made: "js",
+          key: 4,
+          link: "https://weatherantocode9.netlify.app",
+          github: "https://github.com/Antonimason/Weather",
+          alt: "Weather",
+          image: Weather,
+          title: languaje.source.Projects.wheater.title,
+          icons: [css3, html5, js],
+          text: languaje.source.Projects.wheater.description
       },
-      todolist:{
-        made:"js",
-        key:5,
-        link:"https://todolis-antog9.netlify.app/",
-        github:"https://github.com/Antonimason/To-do-List",
-        alt:"To do list",
-        image:Todo,
-        title:languaje.source.Projects.todojs.title,
-        icons:[bootstrap,js],
-        text:languaje.source.Projects.todojs.description
+      watch: {
+          made: "js",
+          key: 3,
+          link: "https://watchantocode9.netlify.app",
+          github: "https://github.com/Antonimason/Clock-Timer-and-Stopwatch",
+          alt: "Watch",
+          image: Watch,
+          title: languaje.source.Projects.watch.title,
+          icons: [css3, html5, js],
+          text: languaje.source.Projects.watch.description
       },
-      gallery:{
-        made:"jquery",
-        key:6,
-        link:"https://fananime-gallery.netlify.app/",
-        github:"https://github.com/Antonimason/Gallery",
-        alt:"Gallery",
-        image:Galery,
-        icons:[bootstrap,jquery],
-        title:languaje.source.Projects.gallery.title,
-        text:languaje.source.Projects.gallery.description
+      calculator: {
+          made: "js",
+          key: 2,
+          link: "https://calculatorantocode9.netlify.app",
+          github: "https://github.com/Antonimason/Calculadora-JS",
+          alt: "Calculator",
+          image: Calc,
+          title: languaje.source.Projects.calculator.title,
+          icons: [css3, html5, js],
+          text: languaje.source.Projects.calculator.description
       },
-      portfolio:{
-        made:"js",
-        key:7,
-        link:"https://antonimason.netlify.app/",
-        github:"https://github.com/Antonimason/Portfolio",
-        alt:"Portfolio 1.0",
-        image:portfolio,
-        title:languaje.source.Projects.portfolio.title,
-        icons:[css3,html5,js],
-        text:languaje.source.Projects.portfolio.description
-      },
-      todolistreact:{
-        made:"react",
-        key:8,
-        link:"https://antonimason.github.io/React-TodoList/",
-        github:"https://github.com/Antonimason/React-TodoList",
-        alt:"TodoList",
-        image:Calendar,
-        title:languaje.source.Projects.todoreact.title,
-        icons:[reacty],
-        text:languaje.source.Projects.todoreact.description
+      blog: {
+          made: "html",
+          key: 1,
+          link: "https://viajerosporelmundo.netlify.app",
+          github: "https://github.com/Antonimason/Blog-Viajeros",
+          alt: "blog",
+          image: Blog,
+          title: languaje.source.Projects.blog.title,
+          icons: [css3, html5],
+          text: languaje.source.Projects.blog.description
       }
-    }
+  };
+  
     const styles = {
       transparent : "background-color: transparent; border:1px solid #71bef2 #31acff #1172b2 #31acff; padding: 12px 15px",
       color: "background: linear-gradient(45deg,#2ad39f,#b72ac2); border: none; border-radius: 20px; padding: 12px 15px",
@@ -182,81 +217,60 @@ function App() {
     
     if(pageActive === "about") {
       aboutButton.current.style = `${styles.color};${styles.noShadow};`;
+      careerButton.current.style = `${styles.transparent};${styles.shadow};`;
+      certificateButton.current.style = `${styles.transparent};${styles.shadow};`;
+      spotifyButton.current.style = `${styles.transparent};${styles.shadow};`;
+    }else if (pageActive === "career"){
+      aboutButton.current.style = `${styles.transparent};${styles.shadow};`;
+      careerButton.current.style = `${styles.color};${styles.noShadow};`;
       certificateButton.current.style = `${styles.transparent};${styles.shadow};`;
       spotifyButton.current.style = `${styles.transparent};${styles.shadow};`;
     } else if (pageActive === "certificate") {
       aboutButton.current.style = `${styles.transparent};${styles.shadow};`;
+      careerButton.current.style = `${styles.transparent};${styles.shadow};`;
       certificateButton.current.style = `${styles.color};${styles.noShadow};`;
       spotifyButton.current.style = `${styles.transparent};${styles.shadow};`;
     } else if (pageActive === "spotify"){
       aboutButton.current.style = `${styles.transparent};${styles.shadow};`;
+      careerButton.current.style = `${styles.transparent};${styles.shadow};`;
       certificateButton.current.style = `${styles.transparent};${styles.shadow};`;
       spotifyButton.current.style = `${styles.color};${styles.noShadow};`;
     }
     else {return};
 
     if (projectActive === "all") {
-      //--------------CONTROL BORDER OF BUTTON 1 ---------------------------------
+      //--------------CONTROL BORDER OF BUTTON 1 ---------------------------------//
       projectButton1.current.style = `${styles.color};${styles.noShadow};`
       projectButton2.current.style = `${styles.transparent};${styles.shadow};`
       projectButton3.current.style = `${styles.transparent};${styles.shadow};`
-      let projectstorage = [];
-      for (const project in Projects){
-        projectstorage.push(<Card
-          key={Projects[project].key} 
-          link={Projects[project].link} 
-          github={Projects[project].github} 
-          alt={Projects[project].alt} 
-          image={Projects[project].image} 
-          title={Projects[project].title} 
-          icons={Projects[project].icons}
-          text={Projects[project].text}/>)
-      }
-      setShowProject(projectstorage)
-
-
+      projectButton4.current.style = `${styles.transparent};${styles.shadow};`
+      
+      filterProjectsByLanguaje("all",Projects)
       
     }else if (projectActive === "jquery"){
+      //---------------------CONTROL OF BUTTON 2----------------------------------//
       projectButton2.current.style = `${styles.color};${styles.noShadow};`
       projectButton1.current.style= `${styles.transparent};${styles.shadow};`
       projectButton3.current.style = `${styles.transparent};${styles.shadow};`
-      let projectstorage = [];
-      for (const project in Projects){
-        if(Projects[project].made === "jquery") {
-          projectstorage.push(<Card
-            key={Projects[project].key} 
-            link={Projects[project].link} 
-            github={Projects[project].github} 
-            alt={Projects[project].alt} 
-            image={Projects[project].image} 
-            title={Projects[project].title} 
-            icons={Projects[project].icons}
-            text={Projects[project].text}/>)
-        }
-      }
-      setShowProject(projectstorage)
+      projectButton4.current.style = `${styles.transparent};${styles.shadow};`
+      filterProjectsByLanguaje("jquery",Projects)
 
     } else if(projectActive === "react"){
-      //---------------------CONTROL OF BUTTON 2----------------------------------
+      //---------------------CONTROL OF BUTTON 3----------------------------------//
       projectButton3.current.style = `${styles.color};${styles.noShadow};`
       projectButton1.current.style= `${styles.transparent};${styles.shadow};`
       projectButton2.current.style = `${styles.transparent};${styles.shadow};`
-      let projectstorage = [];
-      for (const project in Projects){
-        if(Projects[project].made === "react") {
-          projectstorage.push(<Card
-            key={Projects[project].key} 
-            link={Projects[project].link} 
-            github={Projects[project].github} 
-            alt={Projects[project].alt} 
-            image={Projects[project].image} 
-            title={Projects[project].title} 
-            icons={Projects[project].icons}
-            text={Projects[project].text}/>)
-        }
-      }
-      setShowProject(projectstorage)
+      projectButton4.current.style = `${styles.transparent};${styles.shadow};`
+      filterProjectsByLanguaje("react",Projects)
 
+    }else if(projectActive === "python"){
+      //---------------------CONTROL OF BUTTON 3----------------------------------//
+      projectButton3.current.style = `${styles.transparent};${styles.shadow};`
+      projectButton1.current.style= `${styles.transparent};${styles.shadow};`
+      projectButton2.current.style = `${styles.transparent};${styles.shadow};`
+      projectButton4.current.style = `${styles.color};${styles.noShadow};`
+
+      filterProjectsByLanguaje("python",Projects)
     }else {
       setShowProject(" There's not Projects to show");
     }
@@ -302,12 +316,16 @@ function App() {
           <div className="about-left">
             <div className="button-about">
               <button ref={aboutButton} className="port-button" onClick={(e)=>{setPageActive("about")}}>{languaje.source.About.about}</button>
+              <button ref={careerButton} className="port-button" onClick={(e)=>{setPageActive("career")}}>{languaje.source.About.career}</button>
               <button ref={certificateButton} className="port-button" onClick={(e)=>{setPageActive("certificate")}}>{languaje.source.About.resume}</button>
               <button ref={spotifyButton} className="port-button" onClick={(e)=>{setPageActive("spotify")}}>Spotify</button>
             </div>
             <div className="about-text" style={pageActive==="about" ? {"display":"block"} : {"display": "none"}}>
               <h2 id="about-me" className="together title">{languaje.source.About.aboutMe}</h2>
               <p id="my-resume" className="text">{languaje.source.About.me}</p>
+            </div>
+            <div className="about-certificate" style={pageActive==="career" ? {"display":"flex"} : {"display": "none"}}>
+              
             </div>
             <div className="about-certificate" style={pageActive==="certificate" ? {"display":"flex"} : {"display": "none"}}>
               {searchCourse()}
@@ -363,6 +381,7 @@ function App() {
             <button ref={projectButton1} className="port-button" onClick={(e) => {setProjectActive("all");}}>{languaje.source.Projects.small}</button>
             <button ref={projectButton2} className="port-button" onClick={(e) => {setProjectActive("jquery");}}>{languaje.source.Projects.jquery}</button>
             <button ref={projectButton3} className="port-button port2" onClick={(e) => {setProjectActive("react");}}>{languaje.source.Projects.react}</button>
+            <button ref={projectButton4} className="port-button port2" onClick={(e) => {setProjectActive("python");}}>{languaje.source.Projects.python}</button>
           </div>
           {showProject}
         </div>

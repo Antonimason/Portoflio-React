@@ -14,6 +14,7 @@
         },
         "About":{
             "about":"Acerca",
+            "career":"Carrera",
             "resume":"Certificados",
             "download":"Descargar CV",
             "aboutMe":"Acerca de mi",
@@ -72,10 +73,11 @@
             "Hskills":"Habilidades Duras"
         },
         "Projects":{
-            "project":"Aquí podras ver algunos proyectos que he hecho",
-            "small":"Pequeños Proyectos",
-            "jquery":"Proyectos en JQuery",
-            "react":"Proyectos en React",
+            "project":"Proyectos",
+            "small":"Mostrar Todos",
+            "jquery":"JQuery",
+            "react":"React",
+            "python":"Python",
             "blog":{
                 "title":"Blog",
                 "description":"Un blog hecho con HTML y CSS. Viajeros por el mundo una pareja a la que le gusta la apasionante experiencia de viajar por el mundo"

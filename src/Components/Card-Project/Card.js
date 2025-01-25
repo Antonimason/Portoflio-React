@@ -10,8 +10,8 @@ function Card(props) {
   const [clicklink, setClicklink] = useState(false)
   return (
       <div className="card-container">
-          <img className="card-img" src={props.image} loading="lazy" alt={props.alt} style={clicklink ? {"filter":"brightness(0.2)"} : {"filter":"brightness(1)"}} onClick={(e)=>{clicklink === false ? setClicklink(true): setClicklink(false)}}/>
-          <div className="link-container">
+          <img className="card-img" src={props.image} loading="lazy" alt={props.alt} style={clicklink ? {"filter":"brightness(0.2)"} : {"filter":"brightness(1)"}} onMouseEnter={(e)=>{setClicklink(true)}} onMouseLeave={()=>{setClicklink(false)}}/>
+          <div className="link-container" onMouseEnter={(e)=>{setClicklink(true)}} onMouseLeave={()=>{setClicklink(false)}}>
             <a className="link-item" target="_blank" rel="noreferrer" title="Web" onClick={(e)=>{setClicklink(false)}} style={clicklink ? {"display": "flex"} : {"display": "none"}} href={props.link}><HiOutlineHome/></a>
             <a className="link-item" target="_blank" rel="noreferrer" title="github" onClick={(e)=>{setClicklink(false)}} style={clicklink ? {"display": "flex"} : {"display": "none"}} href={props.github}><FaGithub/></a>
           </div>
