@@ -19,6 +19,20 @@
             "download":"Descargar CV",
             "aboutMe":"Acerca de mi",
             "me": "Nací y crecí en Caracas-Venezuela y actualmente vivo en Dublín-Irlanda. Me apasiona viajar y aprender de diferentes culturas de todo el mundo. Soy un desarrollador web autodidacta, y actualmente estoy trabajando para obtener un diploma en desarrollo de software para ampliar mis conocimientos del sector de Tecnología y lograr mi objetivo de convertirme en un desarrollador Full-Stack.",
+            "careers":{
+                "career1":{
+                    "title":"Diploma in Applied Software Development",
+                    "description":"NFQ Level 7 | 2:1 GPA | CCT Dublin College ",
+                    "finished":"2024",
+                    "link":""
+                },
+                "career2":{
+                    "title":"Higher Diploma in Data Analytics for Business",
+                    "description":"NFQ Level 8 | 2:1 GPA | CCT Dublin College ",
+                    "finished":"2025",
+                    "link":""
+                }
+            },
             "courses":{
                 "course1" : {
                 "title":"Introducción al desarrollo web: HTML",

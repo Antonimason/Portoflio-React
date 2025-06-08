@@ -19,6 +19,20 @@
             "download":"Download CV",
             "aboutMe":"About me",
             "me": "I was born and raised in Caracas-Venezuela and currently reside in Dublín-Ireland. I am very passionate about travelling and learning from different cultures around the world. I am a self-taught web developer, and I am currently working towards earning a diploma in software development to expand my knowledge of the IT sector and achieve my goal of becoming a Full-Stack developer",
+            "careers":{
+                "career1":{
+                    "title":"Diploma in Applied Software Development",
+                    "description":"NFQ Level 7 | 2:1 GPA | CCT Dublin College ",
+                    "finished":"2024",
+                    "link":""
+                },
+                "career2":{
+                    "title":"Higher Diploma in Data Analytics for Business",
+                    "description":"NFQ Level 8 | 2:1 GPA | CCT Dublin College ",
+                    "finished":"2025",
+                    "link":""
+                }
+            },
             "courses":{
                 "course1" : {
                 "title":"Web Development introduction HTML",

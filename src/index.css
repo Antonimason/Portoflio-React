@@ -22,10 +22,6 @@ body {
     -ms-overflow-style: none; /* Oculta el scroll en navegadores antiguos de Microsoft */
 }
 
-/* Ocultar scroll en navegadores basados en WebKit (Chrome, Edge, Safari) */
-::-webkit-scrollbar {
-    display: none;
-}
 .title{
   color: white;
   font-weight: bold;

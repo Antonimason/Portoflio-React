@@ -55,12 +55,14 @@ function App() {
   //------------SELECTION BUTTON ABOUT PAGE ---------------------
   const [pageActive, setPageActive] = useState("about");
   
-  const searchCourse = ()=>{
+  const searchCourse = (action)=>{
     let courses = languaje.source.About.courses
+    let career = languaje.source.About.careers
+    let actionArray;
+    action === "course" ? actionArray = Object.values(courses) : actionArray = Object.values(career)
     //Converting the object into a value array
-    const courseArray = Object.values(courses);
 
-    return courseArray.map(course => (
+    return actionArray.map(course => (
       <Certificate 
         key={course.title} 
         link={course.link} 
@@ -215,65 +217,41 @@ function App() {
     }
 
     
-    if(pageActive === "about") {
-      aboutButton.current.style = `${styles.color};${styles.noShadow};`;
-      careerButton.current.style = `${styles.transparent};${styles.shadow};`;
-      certificateButton.current.style = `${styles.transparent};${styles.shadow};`;
-      spotifyButton.current.style = `${styles.transparent};${styles.shadow};`;
-    }else if (pageActive === "career"){
-      aboutButton.current.style = `${styles.transparent};${styles.shadow};`;
-      careerButton.current.style = `${styles.color};${styles.noShadow};`;
-      certificateButton.current.style = `${styles.transparent};${styles.shadow};`;
-      spotifyButton.current.style = `${styles.transparent};${styles.shadow};`;
-    } else if (pageActive === "certificate") {
-      aboutButton.current.style = `${styles.transparent};${styles.shadow};`;
-      careerButton.current.style = `${styles.transparent};${styles.shadow};`;
-      certificateButton.current.style = `${styles.color};${styles.noShadow};`;
-      spotifyButton.current.style = `${styles.transparent};${styles.shadow};`;
-    } else if (pageActive === "spotify"){
-      aboutButton.current.style = `${styles.transparent};${styles.shadow};`;
-      careerButton.current.style = `${styles.transparent};${styles.shadow};`;
-      certificateButton.current.style = `${styles.transparent};${styles.shadow};`;
-      spotifyButton.current.style = `${styles.color};${styles.noShadow};`;
+    const layoutButtons = {
+    about: aboutButton,
+    career: careerButton,
+    certificate: certificateButton,
+    spotify: spotifyButton
+    };
+
+  Object.entries(layoutButtons).forEach(([key, button]) => {
+    if (key === pageActive) {
+      button.current.style = `${styles.color};${styles.noShadow};`;
+    } else {
+      button.current.style = `${styles.transparent};${styles.shadow};`;
     }
-    else {return};
+  });
 
-    if (projectActive === "all") {
-      //--------------CONTROL BORDER OF BUTTON 1 ---------------------------------//
-      projectButton1.current.style = `${styles.color};${styles.noShadow};`
-      projectButton2.current.style = `${styles.transparent};${styles.shadow};`
-      projectButton3.current.style = `${styles.transparent};${styles.shadow};`
-      projectButton4.current.style = `${styles.transparent};${styles.shadow};`
-      
-      filterProjectsByLanguaje("all",Projects)
-      
-    }else if (projectActive === "jquery"){
-      //---------------------CONTROL OF BUTTON 2----------------------------------//
-      projectButton2.current.style = `${styles.color};${styles.noShadow};`
-      projectButton1.current.style= `${styles.transparent};${styles.shadow};`
-      projectButton3.current.style = `${styles.transparent};${styles.shadow};`
-      projectButton4.current.style = `${styles.transparent};${styles.shadow};`
-      filterProjectsByLanguaje("jquery",Projects)
+    const projectButtons = {
+  all: projectButton1,
+  jquery: projectButton2,
+  react: projectButton3,
+  python: projectButton4,
+};
 
-    } else if(projectActive === "react"){
-      //---------------------CONTROL OF BUTTON 3----------------------------------//
-      projectButton3.current.style = `${styles.color};${styles.noShadow};`
-      projectButton1.current.style= `${styles.transparent};${styles.shadow};`
-      projectButton2.current.style = `${styles.transparent};${styles.shadow};`
-      projectButton4.current.style = `${styles.transparent};${styles.shadow};`
-      filterProjectsByLanguaje("react",Projects)
-
-    }else if(projectActive === "python"){
-      //---------------------CONTROL OF BUTTON 3----------------------------------//
-      projectButton3.current.style = `${styles.transparent};${styles.shadow};`
-      projectButton1.current.style= `${styles.transparent};${styles.shadow};`
-      projectButton2.current.style = `${styles.transparent};${styles.shadow};`
-      projectButton4.current.style = `${styles.color};${styles.noShadow};`
-
-      filterProjectsByLanguaje("python",Projects)
-    }else {
-      setShowProject(" There's not Projects to show");
+if (projectButtons[projectActive]) {
+  Object.entries(projectButtons).forEach(([key, button]) => {
+    if (key === projectActive) {
+      button.current.style = `${styles.color};${styles.noShadow};`;
+    } else {
+      button.current.style = `${styles.transparent};${styles.shadow};`;
     }
+  });
+
+  filterProjectsByLanguaje(projectActive, Projects);
+} else {
+  setShowProject("There's not Projects to show");
+}
   },[languaje, projectActive, pageActive]);
 
   return (
@@ -325,10 +303,10 @@ function App() {
               <p id="my-resume" className="text">{languaje.source.About.me}</p>
             </div>
             <div className="about-certificate" style={pageActive==="career" ? {"display":"flex"} : {"display": "none"}}>
-              
+              {searchCourse("career")}
             </div>
             <div className="about-certificate" style={pageActive==="certificate" ? {"display":"flex"} : {"display": "none"}}>
-              {searchCourse()}
+              {searchCourse("course")}
             </div>
             <div className="about-spotify" style={pageActive==="spotify" ? {"display":"flex"} : {"display": "none"}}>
               <div className="playlist">
