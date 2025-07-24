@@ -82,6 +82,7 @@ function App() {
   const projectButton2 = useRef();
   const projectButton3 = useRef();
   const projectButton4 = useRef();
+  const projectButton5 = useRef();
   const aboutButton = useRef();
   const careerButton = useRef();
   const certificateButton = useRef();
@@ -232,12 +233,13 @@ function App() {
     }
   });
 
-    const projectButtons = {
-  all: projectButton1,
-  jquery: projectButton2,
-  react: projectButton3,
-  python: projectButton4,
-};
+  const projectButtons = {
+    all: projectButton1,
+    jquery: projectButton2,
+    react: projectButton3,
+    python: projectButton4,
+    data: projectButton5,
+  };
 
 if (projectButtons[projectActive]) {
   Object.entries(projectButtons).forEach(([key, button]) => {
@@ -360,6 +362,7 @@ if (projectButtons[projectActive]) {
             <button ref={projectButton2} className="port-button" onClick={(e) => {setProjectActive("jquery");}}>{languaje.source.Projects.jquery}</button>
             <button ref={projectButton3} className="port-button port2" onClick={(e) => {setProjectActive("react");}}>{languaje.source.Projects.react}</button>
             <button ref={projectButton4} className="port-button port2" onClick={(e) => {setProjectActive("python");}}>{languaje.source.Projects.python}</button>
+            <button ref={projectButton5} className="port-button port2" onClick={(e) => {setProjectActive("data");}}>{languaje.source.Projects.data}</button>
           </div>
           {showProject}
         </div>

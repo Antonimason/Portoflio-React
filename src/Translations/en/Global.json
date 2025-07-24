@@ -92,6 +92,7 @@
             "jquery":"JQuery",
             "react":"React",
             "python":"Python",
+            "data":"Data Analysis",
             "blog":{
                 "title":"Blog",
                 "description":"A blog page made with HTML and CSS. Viajeros por el mundo a couple that likes the exciting experience of traveling around the world"
@@ -123,6 +124,10 @@
             "todoreact":{
                 "title":"To do List",
                 "description":"The project is based on a To-do-List where you can add your tasks that you want to do. I've used the LocalStorage API to store the tasks data."
+            },
+            "malware":{
+                "title":"Obsfucated Malware Analysis",
+                "description":"Machine learning model applied for early Malware detection"
             }
         },
         "Footer":{

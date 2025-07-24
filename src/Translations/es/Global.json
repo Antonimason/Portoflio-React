@@ -92,6 +92,7 @@
             "jquery":"JQuery",
             "react":"React",
             "python":"Python",
+            "data":"Data Analisis",
             "blog":{
                 "title":"Blog",
                 "description":"Un blog hecho con HTML y CSS. Viajeros por el mundo una pareja a la que le gusta la apasionante experiencia de viajar por el mundo"
@@ -123,6 +124,10 @@
             "todoreact":{
                 "title":"Lista de tareas",
                 "description":"Una lista de tareas 2.0 donde puedes añadir tus tareas diarias. Hecho con React y la API LocalStorage para almacenar los datos."
+            },
+            "malware":{
+                "title":"Malware Ofuscado Analisis",
+                "description":"Aplicacion de machine learning para la deteccion temprana de malware ofuscado"
             }
         },
         "Footer":{
