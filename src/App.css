@@ -350,12 +350,14 @@ footer {
   #home-container{
     flex-direction:row-reverse;
     justify-content: space-evenly;
+    margin: 10px auto;
   }
   .home-title{
     font-size: 4.375em;
   }
   .home-subtitle{
-    font-size: 3.125em;
+    font-size: 2.525em;
+    width: 25rem;
   }
   .home-img{
     border-radius: 10px;
